@@ -6,6 +6,17 @@ public class User {
     private int age;
     private Address address;
 
+    public User(){
+
+    }
+
+    public User(int id, String name, int age, Address address) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "User{" +

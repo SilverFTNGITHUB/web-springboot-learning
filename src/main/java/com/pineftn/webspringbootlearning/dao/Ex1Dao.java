@@ -9,12 +9,12 @@ import java.util.List;
 //使得三层架构之间耦合性降低
 public interface Ex1Dao {
     //查
-    User getUserById(int id);
+//    User getUserById(int id);
     List<User> getAllUser();
 
     //增删改
-    void saveUser(User user);
-    void updateUser(User user);
-    void deleteUser(int id);
+//    void saveUser(User user);
+//    void updateUser(User user);
+//    void deleteUser(int id);
 
 }
