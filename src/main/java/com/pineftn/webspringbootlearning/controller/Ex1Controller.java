@@ -1,11 +1,9 @@
 package com.pineftn.webspringbootlearning.controller;
 
 import com.pineftn.webspringbootlearning.pojo.Result;
-import com.pineftn.webspringbootlearning.pojo.User;
+import com.pineftn.webspringbootlearning.pojo.SimpleUser;
 import com.pineftn.webspringbootlearning.service.Ex1Service;
-import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,10 +22,10 @@ public class Ex1Controller {
     @RequestMapping("userList")
     public Result userList() {
         //调用Service获取数据
-        List<User> userList = ex1Service.getAllUser();
-        System.out.println(userList);
+        List<SimpleUser> simpleUserList = ex1Service.getAllUser();
+        System.out.println(simpleUserList);
         //组装数据并返回
-        return Result.success(userList);
+        return Result.success(simpleUserList);
     }
 
 }

@@ -2,9 +2,8 @@ package com.pineftn.webspringbootlearning.dao.impl;
 
 import com.pineftn.webspringbootlearning.dao.Ex1Dao;
 import com.pineftn.webspringbootlearning.pojo.Address;
-import com.pineftn.webspringbootlearning.pojo.User;
+import com.pineftn.webspringbootlearning.pojo.SimpleUser;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -19,12 +18,12 @@ import java.util.List;
 @Primary // 将当前实现类指定为这个接口的首选bean
 public class Ex1DaoInCode implements Ex1Dao {
     @Override
-    public List<User> getAllUser() {
-        User user1 = new User(1, "Cath", 12, new Address("UK", "London"));
-        User user2 = new User(2, "Dogge", 17, new Address("US", "California"));
-        List<User> userList = new ArrayList<>();
-        userList.add(user1);
-        userList.add(user2);
-        return userList;
+    public List<SimpleUser> getAllUser() {
+        SimpleUser simpleUser1 = new SimpleUser(1, "Cath", 12, new Address("UK", "London"));
+        SimpleUser simpleUser2 = new SimpleUser(2, "Dogge", 17, new Address("US", "California"));
+        List<SimpleUser> simpleUserList = new ArrayList<>();
+        simpleUserList.add(simpleUser1);
+        simpleUserList.add(simpleUser2);
+        return simpleUserList;
     }
 }

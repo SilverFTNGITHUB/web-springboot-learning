@@ -1,11 +1,9 @@
 package com.pineftn.webspringbootlearning.service.impl;
 
 import com.pineftn.webspringbootlearning.dao.Ex1Dao;
-import com.pineftn.webspringbootlearning.dao.impl.Ex1DaoInCode;
-import com.pineftn.webspringbootlearning.pojo.User;
+import com.pineftn.webspringbootlearning.pojo.SimpleUser;
 import com.pineftn.webspringbootlearning.service.Ex1Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,11 +23,11 @@ public class Ex1ServiceA implements Ex1Service {
 
 
     @Override
-    public List<User> getAllUser() {
+    public List<SimpleUser> getAllUser() {
         // 调用Dao获取用户列表
-        List<User> userList =ex1Dao.getAllUser();
+        List<SimpleUser> simpleUserList =ex1Dao.getAllUser();
 
 
-        return userList;
+        return simpleUserList;
     }
 }

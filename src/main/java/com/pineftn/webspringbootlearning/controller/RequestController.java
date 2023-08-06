@@ -1,11 +1,10 @@
 package com.pineftn.webspringbootlearning.controller;
 
-import com.pineftn.webspringbootlearning.pojo.User;
+import com.pineftn.webspringbootlearning.pojo.SimpleUser;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
-import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
@@ -41,15 +40,15 @@ public class RequestController {
 
     //非嵌套：http://localhost:8080/simplePojo?name=simplePojo&age=18
     @RequestMapping("/simplePojo")
-    public String simplePojo(User user) {
-        System.out.println(user);
+    public String simplePojo(SimpleUser simpleUser) {
+        System.out.println(simpleUser);
         return "OK";
     }
 
     //嵌套：http://localhost:8080/complexPojo?name=complexPojo&age=18&address.country=UK&address.city=London
     @RequestMapping("/complexPojo")
-    public String complexPojo(User user) {
-        System.out.println(user);
+    public String complexPojo(SimpleUser simpleUser) {
+        System.out.println(simpleUser);
         return "OK";
     }
 
@@ -74,8 +73,8 @@ public class RequestController {
 
 
     @RequestMapping("/jsonParam")
-    public String jsonParam(@RequestBody User user) {
-        System.out.println(user);
+    public String jsonParam(@RequestBody SimpleUser simpleUser) {
+        System.out.println(simpleUser);
         return "OK";
     }
 

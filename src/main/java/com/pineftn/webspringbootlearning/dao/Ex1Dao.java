@@ -1,6 +1,6 @@
 package com.pineftn.webspringbootlearning.dao;
 
-import com.pineftn.webspringbootlearning.pojo.User;
+import com.pineftn.webspringbootlearning.pojo.SimpleUser;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
 public interface Ex1Dao {
     //查
 //    User getUserById(int id);
-    List<User> getAllUser();
+    List<SimpleUser> getAllUser();
 
     //增删改
 //    void saveUser(User user);

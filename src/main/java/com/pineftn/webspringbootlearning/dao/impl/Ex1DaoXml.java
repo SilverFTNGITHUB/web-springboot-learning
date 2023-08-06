@@ -1,7 +1,7 @@
 package com.pineftn.webspringbootlearning.dao.impl;
 
 import com.pineftn.webspringbootlearning.dao.Ex1Dao;
-import com.pineftn.webspringbootlearning.pojo.User;
+import com.pineftn.webspringbootlearning.pojo.SimpleUser;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
 public class Ex1DaoXml implements Ex1Dao {
 
     @Override
-    public List<User> getAllUser() {
+    public List<SimpleUser> getAllUser() {
         // 获取文件绝对路径 PineQ啥玩意？
         String file = this.getClass().getClassLoader().getResource("all_users.xml").getFile();
         //获取xml数据
