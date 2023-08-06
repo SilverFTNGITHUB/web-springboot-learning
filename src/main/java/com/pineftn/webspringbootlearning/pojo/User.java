@@ -1,21 +1,11 @@
 package com.pineftn.webspringbootlearning.pojo;
 
 public class User {
-    private int id;
+    private Integer id;
     private String name;
-    private int age;
-    private Address address;
-
-    public User(){
-
-    }
-
-    public User(int id, String name, int age, Address address) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.address = address;
-    }
+    private Short age;
+    private Short gender;
+    private String phone;
 
     @Override
     public String toString() {
@@ -23,43 +13,48 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", address=" + address +
+                ", gender=" + gender +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
 
     public String getName() {
         return name;
-    }
-
-    public int getAge() {
-        return age;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAge(int age) {
+    public Short getAge() {
+        return age;
+    }
+
+    public void setAge(Short age) {
         this.age = age;
     }
 
+    public Short getGender() {
+        return gender;
+    }
 
+    public void setGender(Short gender) {
+        this.gender = gender;
+    }
 
+    public String getPhone() {
+        return phone;
+    }
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 }
